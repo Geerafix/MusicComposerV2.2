@@ -1,0 +1,17 @@
+﻿<Window x:Class="MusicComposerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicComposerWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Image Margin="-140,0,287,143" Source="/background.png"/>
+        <Button Content="Button1" Margin="326,319,326,56" RenderTransformOrigin="0.634,1.054"/>
+        <Button Content="Button2" Margin="480,254,172,121" RenderTransformOrigin="0.634,1.054" Click="Button1_Click"/>
+        <Button Content="Button3" Margin="172,254,480,121" RenderTransformOrigin="0.634,1.054" Click="Button2_Click"/>
+        <TextBox Name="aaa" HorizontalAlignment="Left" Margin="343,176,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
