@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="MusicComposerWPF.TracksControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MusicComposerWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1200">
+    <Grid Background="#FF1D2025">
+        <Label x:Name="tracksLabel" Content="Tracks" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Chopin Script" FontSize="170" Foreground="#FFD173" Margin="99, 99,0,0"/>
+        <ListBox x:Name="tracksListBox" HorizontalAlignment="Left" Height="420" Margin="152,308,0,0" VerticalAlignment="Top" Width="361" Background="#171C27" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13" SelectionChanged="tracksListBox_SelectedIndexChanged"/>
+        <Button x:Name="deleteTrackButton" Content="X" HorizontalAlignment="Left" Margin="231,728,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="10.8" Background="#FFAD5E" BorderThickness="0" Click="deleteButton_Click"/>
+        <Button x:Name="modifyTrackButton" Content="✎" HorizontalAlignment="Left" Margin="175,728,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13.8" Background="#FFAD5E" BorderThickness="0" Click="modifyTrackButton_Click"/>
+        <Button x:Name="playTrackButton" Content=">" HorizontalAlignment="Left" Margin="287,728,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13.8" Background="#FFAD5E" BorderThickness="0" Click="playTrackButton_Click"/>
+        <Button x:Name="menuButton" Content="Main menu" HorizontalAlignment="Left" Margin="800,450,0,0" VerticalAlignment="Top" Width="200" Height="100" FontFamily="Century Gothic" FontSize="30" Background="#FFAD5E" BorderThickness="0" Click="menuButton_Click"/>
+    </Grid>
+</UserControl>

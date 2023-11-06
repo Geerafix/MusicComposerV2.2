@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\App.xaml
-11407045341
+3-821243667
 
-5-784804522
-198-306949569
-MainWindow.xaml;
+8-1872378757
+2132143531057
+MainWindow.xaml;MenuControl.xaml;TracksControl.xaml;
 
-True
+False
 

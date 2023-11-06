@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MusicComposer;
+using NAudio.Midi;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,16 +20,42 @@ namespace MusicComposerWPF {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
+        private MidiOut play = new MidiOut(0);
+        TracksControl tc;
+        MenuControl mc;
         public MainWindow() {
             InitializeComponent();
+            mc = (MenuControl)FindName("MenuControl");
+            tc = (TracksControl)FindName("TracksControl");
+            mc.Visibility = Visibility.Visible;
+            tc.Visibility = Visibility.Collapsed;
+        }    
+
+        public MidiOut getMidi() {
+            return play;
         }
 
-        private void Button1_Click(object sender, RoutedEventArgs e) {
-            aaa.Text = "aa";
+        public void toTracksFromMenu() {
+            tc.Visibility = Visibility.Visible;
         }
 
-        private void Button2_Click(object sender, RoutedEventArgs e) {
+        public void toMenuFromTracks() {
+            mc.Visibility = Visibility.Visible;
+        }
 
+        public void toEditFromTracks(string trackName, List<Note> track) {
+
+        }
+
+        public void toTracksFromEdit() {
+            
+        }
+
+        public void toComposeFromMenu() {
+            
+        }
+        public void toMenuFromCompose() {
+            
         }
     }
 }

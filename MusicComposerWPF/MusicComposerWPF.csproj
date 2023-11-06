@@ -8,11 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="background.png" />
+    <None Remove="corolla.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="background.png" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="corolla.png" />
   </ItemGroup>
 
 </Project>

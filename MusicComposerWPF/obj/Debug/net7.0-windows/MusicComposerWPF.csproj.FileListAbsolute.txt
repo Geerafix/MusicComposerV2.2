@@ -18,3 +18,17 @@ C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows
 C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\MusicComposerWPF.pdb
 C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\MusicComposerWPF.genruntimeconfig.cache
 C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\ref\MusicComposerWPF.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\MenuControl.g.cs
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\MenuControl.baml
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\TracksControl.g.cs
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\TracksControl.baml
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Debug\net7.0-windows\NAudio.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Debug\net7.0-windows\NAudio.Asio.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Debug\net7.0-windows\NAudio.Core.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Debug\net7.0-windows\NAudio.Midi.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Debug\net7.0-windows\NAudio.Wasapi.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Debug\net7.0-windows\NAudio.WinForms.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Debug\net7.0-windows\NAudio.WinMM.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\MusicComposerWPF.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\MusicComposerWPF.csproj.CopyComplete
