@@ -6,8 +6,11 @@
              xmlns:local="clr-namespace:MusicComposerWPF"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1200">
-    
-    <Grid Background="#FF1D2025">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/bck.png"/>
+        </Grid.Background>
         <Label x:Name="positionLabel" Content="Position:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="Snow" Margin="893,24,0,0"/>
         <Label x:Name="noteCountLabel" Content="Note count:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="Snow" Margin="1038,24,0,0"/>
         <Label x:Name="position" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="30" FontWeight="Bold" Foreground="Snow" Background="Transparent" Margin="978,12,0,0"/>
@@ -18,10 +21,26 @@
         <Label x:Name="noteLabel" Content="C1" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="130" FontWeight="Bold" Foreground="MintCream" Margin="157,358,0,0"/>
         <Label x:Name="durationLabel" Content="500" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="130" FontWeight="Bold" Foreground="MintCream" Margin="520,360,0,0"/>
 
-        <Button x:Name="noteUp" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Background="Transparent" Cursor="Hand" Margin="166,226,0,0" Click="noteUp_Click"/>
-        <Button x:Name="noteDown" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Background="Transparent" Cursor="Hand" Margin="169,527,0,0" Click="noteDown_Click"/>
-        <Button x:Name="durationUp" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Background="Transparent" Cursor="Hand" Margin="524,226,0,0" Click="durationUp_Click"/>
-        <Button x:Name="durationDown" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Background="Transparent" Cursor="Hand" Margin="524,529,0,0" Click="durationDown_Click"/>
+        <Button x:Name="noteUp" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Cursor="Hand" Margin="166,226,0,0" Click="noteUp_Click" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/arrowUp.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="noteDown" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Cursor="Hand" Margin="169,527,0,0" Click="noteDown_Click" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/arrowDown.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="durationUp" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Cursor="Hand" Margin="524,226,0,0" Click="durationUp_Click" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/arrowUp.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="durationDown" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Cursor="Hand" Margin="524,529,0,0" Click="durationDown_Click" BorderThickness="0">
+            <Button.Background>
+                <ImageBrush ImageSource="/arrowDown.png"/>
+            </Button.Background>
+        </Button>
 
         <Button x:Name="playNoteButton" Content="&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Cursor="Hand" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold"  Margin="44,332,0,0" Click="playNoteButton_Click" FontSize="30"/>
         <Button x:Name="addNoteButton" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Cursor="Hand" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Margin="44,418,0,0" Click="addNoteButton_Click" FontSize="30"/>

@@ -9,10 +9,13 @@
              xmlns:gif="http://wpfanimatedgif.codeplex.com">
 
 
-    <Grid Background="#FF010B16">
-        <Button Content="Tracks" HorizontalAlignment="Left" Margin="200,450,0,0" VerticalAlignment="Top" Height="100" Width="200" FontSize="30" FontFamily="Century Gothic" Click="toTracks"/>
-        <Button Content="Compose" HorizontalAlignment="Left" Margin="800,450,0,0" VerticalAlignment="Top" Height="100" Width="200" FontSize="30" FontFamily="Century Gothic" Click="toCompose"/>
-        <Button Content="Exit" HorizontalAlignment="Center" Margin="0,550,0,0" VerticalAlignment="Top" Height="100" Width="200" FontSize="30" FontFamily="Century Gothic" Click="toExit"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/bck.png"/>
+        </Grid.Background>
+        <Button Content="Tracks" HorizontalAlignment="Left" Margin="200,450,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="30" FontFamily="Century Gothic" Click="toTracks"/>
+        <Button Content="Compose" HorizontalAlignment="Left" Margin="800,450,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="30" FontFamily="Century Gothic" Click="toCompose"/>
+        <Button Content="Exit" HorizontalAlignment="Center" Margin="0,550,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="30" FontFamily="Century Gothic" Click="toExit"/>
 
         <Label Content="MusicComposer" HorizontalAlignment="Center" Margin="0,99,0,0" VerticalAlignment="Top" FontFamily="Chopin Script" FontSize="170" Foreground="#FFFFD173" FontWeight="Bold"/>
         <Label Content="by Adam Grzeszczuk" HorizontalAlignment="Left" Margin="955,753,0,0" VerticalAlignment="Top" Foreground="#FF1580B4" FontFamily="Century Gothic" FontStyle="Italic" FontSize="22" FontWeight="Bold"/>
