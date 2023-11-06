@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicComposerWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200">
+        Title="MainWindow" Height="837" Width="1214">
     <Grid>
+        <local:EditControl x:Name="EditControl"/>
         <local:MenuControl x:Name="MenuControl"/>
         <local:TracksControl x:Name="TracksControl"/>
+        <local:ComposeControl x:Name="ComposeControl"/>
     </Grid>
 </Window>

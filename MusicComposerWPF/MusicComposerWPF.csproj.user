@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ComposeControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="MenuControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -15,6 +21,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ComposeControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

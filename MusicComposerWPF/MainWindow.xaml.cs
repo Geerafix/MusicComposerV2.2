@@ -16,19 +16,22 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MusicComposerWPF {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window {
         private MidiOut play = new MidiOut(0);
-        TracksControl tc;
-        MenuControl mc;
+        private TracksControl tc;
+        private MenuControl mc;
+        private ComposeControl cc;
+        private EditControl ec;
         public MainWindow() {
             InitializeComponent();
             mc = (MenuControl)FindName("MenuControl");
             tc = (TracksControl)FindName("TracksControl");
+            cc = (ComposeControl)FindName("ComposeControl");
+            ec = (EditControl)FindName("EditControl");
             mc.Visibility = Visibility.Visible;
             tc.Visibility = Visibility.Collapsed;
+            cc.Visibility = Visibility.Collapsed;
+            ec.Visibility = Visibility.Collapsed;
         }    
 
         public MidiOut getMidi() {
@@ -36,6 +39,7 @@ namespace MusicComposerWPF {
         }
 
         public void toTracksFromMenu() {
+            tc.loadTracks();
             tc.Visibility = Visibility.Visible;
         }
 
@@ -44,18 +48,21 @@ namespace MusicComposerWPF {
         }
 
         public void toEditFromTracks(string trackName, List<Note> track) {
-
+            ec.loadTrack(trackName, track);
+            ec.Visibility = Visibility.Visible;
         }
 
         public void toTracksFromEdit() {
-            
+            tc.Visibility = Visibility.Visible;
         }
 
         public void toComposeFromMenu() {
-            
+            cc.loadTempTrack();
+            cc.Visibility = Visibility.Visible;
         }
+
         public void toMenuFromCompose() {
-            
+            mc.Visibility = Visibility.Visible;
         }
     }
 }

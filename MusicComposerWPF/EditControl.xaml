@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="MusicComposerWPF.EditControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MusicComposerWPF"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="1200">
+    
+    <Grid Background="#FF1D2025">
+        <Label x:Name="positionLabel" Content="Position:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="Snow" Margin="893,24,0,0"/>
+        <Label x:Name="noteCountLabel" Content="Note count:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="Snow" Margin="1038,24,0,0"/>
+        <Label x:Name="position" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="30" FontWeight="Bold" Foreground="Snow" Background="Transparent" Margin="978,12,0,0"/>
+        <Label x:Name="noteCount" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="30" FontWeight="Bold" Foreground="Snow" Margin="1152,12,0,0"/>
+
+        <Button x:Name="toTracksButton" Content="Main&#xD;&#xA;menu" HorizontalAlignment="Left" Cursor="Hand" VerticalAlignment="Top" Width="60" Height="60" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Margin="3,3,0,0" Click="toTracksButton_Click"/>
+
+        <Label x:Name="noteLabel" Content="C1" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="130" FontWeight="Bold" Foreground="MintCream" Margin="157,358,0,0"/>
+        <Label x:Name="durationLabel" Content="500" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="130" FontWeight="Bold" Foreground="MintCream" Margin="520,360,0,0"/>
+
+        <Button x:Name="noteUp" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Background="Transparent" Cursor="Hand" Margin="166,226,0,0" Click="noteUp_Click"/>
+        <Button x:Name="noteDown" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Background="Transparent" Cursor="Hand" Margin="169,527,0,0" Click="noteDown_Click"/>
+        <Button x:Name="durationUp" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Background="Transparent" Cursor="Hand" Margin="524,226,0,0" Click="durationUp_Click"/>
+        <Button x:Name="durationDown" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Background="Transparent" Cursor="Hand" Margin="524,529,0,0" Click="durationDown_Click"/>
+
+        <Button x:Name="playNoteButton" Content="&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Cursor="Hand" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold"  Margin="44,332,0,0" Click="playNoteButton_Click" FontSize="30"/>
+        <Button x:Name="addNoteButton" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Cursor="Hand" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Margin="44,418,0,0" Click="addNoteButton_Click" FontSize="30"/>
+        <Button x:Name="deleteNoteButton" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Cursor="Hand" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Margin="44,504,0,0" Click="deleteNoteButton_Click" FontSize="30"/>
+
+        <Button x:Name="previousNoteButton" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="29" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" Margin="167,169,0,0" Click="previousNoteButton_Click" FontSize="20"/>
+        <Button x:Name="nextNoteButton" Content="&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="29" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" Margin="524,169,0,0" Click="nextNoteButton_Click" FontSize="20"/>
+        <ListBox x:Name="trackNotesListBox" Background="#171C27" HorizontalAlignment="Left" Height="729" Margin="898,64,0,0" VerticalAlignment="Top" Width="295" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold" Foreground="Snow"/>
+        <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" Margin="69,3,0,0" Click="saveButton_Click"/>
+        <TextBox x:Name="trackNameTextBox" FontFamily="Century Gothic" FontSize="13.8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Height="36" Margin="135,16,0,0" Visibility="Hidden"/>
+        <Label x:Name="trackNameLabel" Content="Editing:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="Snow" Margin="136,17,0,0"/>
+        <Label x:Name="trackName" Content="(track name)" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="#FFFFD173" Margin="201,16,0,0"/>
+    </Grid>
+</UserControl>

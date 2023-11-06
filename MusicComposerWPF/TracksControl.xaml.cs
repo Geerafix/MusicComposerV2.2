@@ -18,9 +18,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MusicComposerWPF {
-    /// <summary>
-    /// Logika interakcji dla klasy TracksControl.xaml
-    /// </summary>
     public partial class TracksControl : UserControl {
         private FileInfo[] tracks;
         private DirectoryInfo directory;
@@ -44,15 +41,16 @@ namespace MusicComposerWPF {
             MainWindow win = (MainWindow)Window.GetWindow(this);
             win.toMenuFromTracks();
             this.Visibility = Visibility.Collapsed;
+            tracksListBox.UnselectAll();
+            hideButtons();
         }
 
         private void modifyTrackButton_Click(object sender, EventArgs e) {
-/*            ((MainFrame)this.ParentForm).toEditFromTracks(tracksListBox.Items[id].ToString(), toList(tracksListBox.Items[id].ToString()));
-            this.Hide();*/
-/*            MainWindow win = (MainWindow)Window.GetWindow(this);
-            win.toTracksFromMenu();*/
-            hideButtons();
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            win.toEditFromTracks(tracksListBox.Items[id].ToString(), toList(tracksListBox.Items[id].ToString()));
             this.Visibility = Visibility.Collapsed;
+            tracksListBox.UnselectAll();
+            hideButtons();
         }
 
         private void tracksListBox_SelectedIndexChanged(object sender, EventArgs e) {
@@ -71,9 +69,9 @@ namespace MusicComposerWPF {
 
         private void playTrackButton_Click(Object sender, EventArgs e) {
             string[] lines = File.ReadAllLines(path + tracksListBox.Items[id].ToString() + ".txt");
+            MainWindow win = (MainWindow)Window.GetWindow(this);
+            MidiOut play = win.getMidi();
             thread = new Thread(() => {
-                MainWindow win = (MainWindow)Window.GetWindow(this);
-                MidiOut play = win.getMidi();
                 for (int i = 0 ; i < lines.Length ; i += 2) {
                     play.Send(MidiMessage.StartNote(Int32.Parse(lines[i]), 127, 1).RawData);
                     Thread.Sleep(Int32.Parse(lines[i + 1]));
