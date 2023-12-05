@@ -8,11 +8,33 @@
              d:DesignHeight="800" d:DesignWidth="1200"
              xmlns:gif="http://wpfanimatedgif.codeplex.com">
 
+    <UserControl.Resources>
+        <Style x:Key="Style" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                        Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="Black" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
     <Grid Cursor="Hand">
         <Grid.Background>
             <ImageBrush ImageSource="/back.png"/>
         </Grid.Background>
-        <Button Content="Tracks" HorizontalAlignment="Left" Margin="200,450,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="42" FontFamily="Forte" Click="toTracks" BorderThickness="0" BorderBrush="{x:Null}" Foreground="#FF02182B" Opacity="0.8">
+        <Button Content="Tracks" HorizontalAlignment="Left" Style="{StaticResource Style}" Margin="200,450,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="42" FontFamily="Forte" Click="toTracks" BorderThickness="0" BorderBrush="{x:Null}" Foreground="#FF02182B" Opacity="0.8">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFAD54"/>
@@ -20,7 +42,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Compose" HorizontalAlignment="Left" Margin="800,450,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="42" FontFamily="Forte" Click="toCompose" BorderThickness="0" BorderBrush="{x:Null}" Foreground="#FF02182B" Opacity="0.8">
+        <Button Content="Compose" HorizontalAlignment="Left" Style="{StaticResource Style}" Margin="800,450,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="42" FontFamily="Forte" Click="toCompose" BorderThickness="0" BorderBrush="{x:Null}" Foreground="#FF02182B" Opacity="0.8">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFAD54"/>
@@ -28,7 +50,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button Content="Exit" HorizontalAlignment="Center" Margin="0,550,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="42" FontFamily="Forte" Click="toExit" BorderThickness="0" BorderBrush="{x:Null}" Foreground="#FF02182B" Opacity="0.8">
+        <Button Content="Exit" HorizontalAlignment="Center" Style="{StaticResource Style}" Margin="0,550,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="42" FontFamily="Forte" Click="toExit" BorderThickness="0" BorderBrush="{x:Null}" Foreground="#FF02182B" Opacity="0.8">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFAD54"/>

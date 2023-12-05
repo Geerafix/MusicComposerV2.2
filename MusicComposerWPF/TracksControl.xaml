@@ -6,6 +6,29 @@
              xmlns:local="clr-namespace:MusicComposerWPF"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1200">
+
+    <UserControl.Resources>
+        <Style x:Key="Style" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                        Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="Black" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/back.png"/>
@@ -19,31 +42,22 @@
             </Label.Foreground>
         </Label>
         <ListBox x:Name="tracksListBox" HorizontalAlignment="Left" Height="420" Margin="152,308,0,0" VerticalAlignment="Top" Width="361" Background="#171C27" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold" FontSize="18" SelectionChanged="tracksListBox_SelectedIndexChanged"/>
-        <Button x:Name="deleteTrackButton" Content="X" Cursor="Hand" HorizontalAlignment="Left" Margin="209,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="10.8" BorderThickness="0" Click="deleteButton_Click">
+        <Button x:Name="deleteTrackButton" Content="" Style="{StaticResource Style}" Cursor="Hand" HorizontalAlignment="Left" Margin="209,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="10.8" BorderThickness="0" Click="deleteButton_Click">
             <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFFFAD54"/>
-                    <GradientStop Color="#FFFFD173" Offset="1"/>
-                </LinearGradientBrush>
+                <ImageBrush ImageSource="/close.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="modifyTrackButton" Content="✎" Cursor="Hand" HorizontalAlignment="Left" Margin="153,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13.8" BorderThickness="0" Click="modifyTrackButton_Click">
+        <Button x:Name="modifyTrackButton" Content="" Style="{StaticResource Style}" Cursor="Hand" HorizontalAlignment="Left" Margin="153,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13.8" BorderThickness="0" Click="modifyTrackButton_Click">
             <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFFFAD54"/>
-                    <GradientStop Color="#FFFFD173" Offset="1"/>
-                </LinearGradientBrush>
+                <ImageBrush ImageSource="/pencil.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="playTrackButton" Content=">" Cursor="Hand" HorizontalAlignment="Left" Margin="265,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13.8" BorderThickness="0" Click="playTrackButton_Click">
+        <Button x:Name="playTrackButton" Content="" Style="{StaticResource Style}" Cursor="Hand" HorizontalAlignment="Left" Margin="265,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13.8" BorderThickness="0" Click="playTrackButton_Click">
             <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFFFAD54"/>
-                    <GradientStop Color="#FFFFD173" Offset="1"/>
-                </LinearGradientBrush>
+                <ImageBrush ImageSource="/play.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="menuButton" Content="Menu" HorizontalAlignment="Left" Margin="800,450,0,0" Cursor="Hand" VerticalAlignment="Top" Width="200" Height="100" FontSize="42" FontFamily="Forte" Foreground="#FF02182B" BorderThickness="0" Click="menuButton_Click" FontWeight="Bold">
+        <Button x:Name="menuButton" Content="Menu" Style="{StaticResource Style}" HorizontalAlignment="Left" Margin="800,450,0,0" Cursor="Hand" VerticalAlignment="Top" Width="200" Height="100" Visibility="Visible" FontSize="42" FontFamily="Forte" Foreground="#FF02182B" BorderThickness="0" Click="menuButton_Click" FontWeight="Bold">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFAD54"/>

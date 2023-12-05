@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adameq\\Desktop\\MusicComposerWPF\\MusicComposerWPF\\MusicComposerWPF.csproj": {}
+    "C:\\Users\\User\\Desktop\\MusicComposerWPF\\MusicComposerWPF\\MusicComposerWPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adameq\\Desktop\\MusicComposerWPF\\MusicComposerWPF\\MusicComposerWPF.csproj": {
+    "C:\\Users\\User\\Desktop\\MusicComposerWPF\\MusicComposerWPF\\MusicComposerWPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adameq\\Desktop\\MusicComposerWPF\\MusicComposerWPF\\MusicComposerWPF.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\MusicComposerWPF\\MusicComposerWPF\\MusicComposerWPF.csproj",
         "projectName": "MusicComposerWPF",
-        "projectPath": "C:\\Users\\Adameq\\Desktop\\MusicComposerWPF\\MusicComposerWPF\\MusicComposerWPF.csproj",
-        "packagesPath": "C:\\Users\\Adameq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adameq\\Desktop\\MusicComposerWPF\\MusicComposerWPF\\obj\\",
+        "projectPath": "C:\\Users\\User\\Desktop\\MusicComposerWPF\\MusicComposerWPF\\MusicComposerWPF.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\MusicComposerWPF\\MusicComposerWPF\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Adameq\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

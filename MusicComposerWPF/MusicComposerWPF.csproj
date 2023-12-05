@@ -9,11 +9,19 @@
 
   <ItemGroup>
     <None Remove=".png" />
-    <None Remove="arrowDown.png" />
-    <None Remove="arrowUp.png" />
     <None Remove="back.png" />
-    <None Remove="bck.png" />
     <None Remove="black-background.gif" />
+    <None Remove="close.png" />
+    <None Remove="down.png" />
+    <None Remove="left-arrow.png" />
+    <None Remove="main-menu.png" />
+    <None Remove="pencil.png" />
+    <None Remove="play.png" />
+    <None Remove="plus.png" />
+    <None Remove="right-arrow.png" />
+    <None Remove="save.png" />
+    <None Remove="tracks.png" />
+    <None Remove="up.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,11 +30,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="arrowDown.png" />
-    <Resource Include="arrowUp.png" />
     <Resource Include="back.png" />
-    <Resource Include="bck.png" />
     <Resource Include=".png" />
+    <Resource Include="close.png" />
+    <Resource Include="down.png" />
+    <Resource Include="left-arrow.png" />
+    <Resource Include="main-menu.png" />
+    <Resource Include="pencil.png" />
+    <Resource Include="play.png" />
+    <Resource Include="plus.png" />
+    <Resource Include="right-arrow.png" />
+    <Resource Include="save.png" />
+    <Resource Include="tracks.png" />
+    <Resource Include="up.png" />
   </ItemGroup>
 
   <ItemGroup>
