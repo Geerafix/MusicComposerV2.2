@@ -8,16 +8,42 @@
              d:DesignHeight="800" d:DesignWidth="1200"
              xmlns:gif="http://wpfanimatedgif.codeplex.com">
 
-
-    <Grid>
+    <Grid Cursor="Hand">
         <Grid.Background>
-            <ImageBrush ImageSource="/bck.png"/>
+            <ImageBrush ImageSource="/back.png"/>
         </Grid.Background>
-        <Button Content="Tracks" HorizontalAlignment="Left" Margin="200,450,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="30" FontFamily="Century Gothic" Click="toTracks"/>
-        <Button Content="Compose" HorizontalAlignment="Left" Margin="800,450,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="30" FontFamily="Century Gothic" Click="toCompose"/>
-        <Button Content="Exit" HorizontalAlignment="Center" Margin="0,550,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="30" FontFamily="Century Gothic" Click="toExit"/>
-
-        <Label Content="MusicComposer" HorizontalAlignment="Center" Margin="0,99,0,0" VerticalAlignment="Top" FontFamily="Chopin Script" FontSize="170" Foreground="#FFFFD173" FontWeight="Bold"/>
-        <Label Content="by Adam Grzeszczuk" HorizontalAlignment="Left" Margin="955,753,0,0" VerticalAlignment="Top" Foreground="#FF1580B4" FontFamily="Century Gothic" FontStyle="Italic" FontSize="22" FontWeight="Bold"/>
+        <Button Content="Tracks" HorizontalAlignment="Left" Margin="200,450,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="42" FontFamily="Forte" Click="toTracks" BorderThickness="0" BorderBrush="{x:Null}" Foreground="#FF02182B" Opacity="0.8">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFAD54"/>
+                    <GradientStop Color="#FFFFD173" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Compose" HorizontalAlignment="Left" Margin="800,450,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="42" FontFamily="Forte" Click="toCompose" BorderThickness="0" BorderBrush="{x:Null}" Foreground="#FF02182B" Opacity="0.8">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFAD54"/>
+                    <GradientStop Color="#FFFFD173" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Exit" HorizontalAlignment="Center" Margin="0,550,0,0" Cursor="Hand" VerticalAlignment="Top" Height="100" Width="200" FontSize="42" FontFamily="Forte" Click="toExit" BorderThickness="0" BorderBrush="{x:Null}" Foreground="#FF02182B" Opacity="0.8">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFAD54"/>
+                    <GradientStop Color="#FFFFD173" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="MusicComposer" HorizontalAlignment="Center" Margin="0,99,0,0" VerticalAlignment="Top" FontFamily="Chopin Script" FontSize="170" FontWeight="Bold" Cursor="Hand" Background="#00000000">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE39137"/>
+                    <GradientStop Color="#FFFDC485" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Content="by Adam Grzeszczuk" HorizontalAlignment="Left" Margin="1033,764,0,0" VerticalAlignment="Top" Foreground="#FF1580B4" FontFamily="Agency FB" FontStyle="Italic" FontSize="22" FontWeight="Bold" Opacity="0.5"/>
     </Grid>
 </UserControl>

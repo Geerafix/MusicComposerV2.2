@@ -8,11 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove=".png" />
     <None Remove="arrowDown.png" />
     <None Remove="arrowUp.png" />
+    <None Remove="back.png" />
     <None Remove="bck.png" />
     <None Remove="black-background.gif" />
-    <None Remove="corolla.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,9 +24,9 @@
   <ItemGroup>
     <Resource Include="arrowDown.png" />
     <Resource Include="arrowUp.png" />
+    <Resource Include="back.png" />
     <Resource Include="bck.png" />
-    <Resource Include="black-background.gif" />
-    <Resource Include="corolla.png" />
+    <Resource Include=".png" />
   </ItemGroup>
 
   <ItemGroup>

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\
+C:\Users\Adameq\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\
 MusicComposerWPF
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\App.xaml
+C:\Users\Adameq\Desktop\MusicComposerWPF\MusicComposerWPF\App.xaml
 5-479968748
 
 81797697875
-214-568929759
+214-550307825
 ComposeControl.xaml;EditControl.xaml;MainWindow.xaml;MenuControl.xaml;TracksControl.xaml;
 
 False

@@ -7,47 +7,47 @@
              mc:Ignorable="d" Height="800" Width="1200">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/bck.png"/>
+            <ImageBrush ImageSource="/back.png"/>
         </Grid.Background>
         <Label x:Name="positionLabel" Content="Position:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="Snow" Margin="893,24,0,0"/>
         <Label x:Name="noteCountLabel" Content="Note count:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="Snow" Margin="1038,24,0,0"/>
         <Label x:Name="position" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="30" FontWeight="Bold" Foreground="Snow" Background="Transparent" Margin="978,12,0,0"/>
         <Label x:Name="noteCount" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="30" FontWeight="Bold" Foreground="Snow" Margin="1152,12,0,0"/>
 
-        <Button x:Name="toMenuButton" Content="Main&#xD;&#xA;menu" HorizontalAlignment="Left" Cursor="Hand" VerticalAlignment="Top" Width="60" Height="60" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Margin="3,3,0,0" Click="toMenuButton_Click"/>
+        <Button x:Name="toMenuButton" Content="Main&#xD;&#xA;menu" HorizontalAlignment="Left" Cursor="Hand" VerticalAlignment="Top" Width="60" Height="60" Background="#FFFFAD54" FontFamily="Century Gothic" FontWeight="Bold" Margin="3,3,0,0" Click="toMenuButton_Click" BorderThickness="0"/>
 
-        <Label x:Name="noteLabel" Content="C1" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="130" FontWeight="Bold" Foreground="MintCream" Margin="157,358,0,0"/>
-        <Label x:Name="durationLabel" Content="500" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="130" FontWeight="Bold" Foreground="MintCream" Margin="520,360,0,0"/>
+        <Label x:Name="noteLabel" Content="C1" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="130" FontWeight="Bold" Foreground="MintCream" Margin="109,380,0,0" BorderThickness="0" Height="194" Width="270"/>
+        <Label x:Name="durationLabel" Content="500" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="130" FontWeight="Bold" Foreground="MintCream" Margin="527,381,0,0" BorderThickness="0" Height="195" Width="333"/>
 
-        <Button x:Name="noteUp" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Cursor="Hand" Margin="166,226,0,0" Click="noteUp_Click" BorderThickness="0">
+        <Button x:Name="noteUp" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="109" Height="152" Cursor="Hand" Margin="119,228,0,0" Click="noteUp_Click" BorderThickness="0">
             <Button.Background>
                 <ImageBrush ImageSource="/arrowUp.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="noteDown" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Cursor="Hand" Margin="169,527,0,0" Click="noteDown_Click" BorderThickness="0">
+        <Button x:Name="noteDown" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="151" Cursor="Hand" Margin="120,555,0,0" Click="noteDown_Click" BorderThickness="0">
             <Button.Background>
                 <ImageBrush ImageSource="/arrowDown.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="durationUp" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Cursor="Hand" Margin="524,226,0,0" Click="durationUp_Click" BorderThickness="0">
+        <Button x:Name="durationUp" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="152" Cursor="Hand" Margin="532,228,0,0" Click="durationUp_Click" BorderThickness="0">
             <Button.Background>
                 <ImageBrush ImageSource="/arrowUp.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="durationDown" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="132" Cursor="Hand" Margin="524,529,0,0" Click="durationDown_Click" BorderThickness="0">
+        <Button x:Name="durationDown" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="152" Cursor="Hand" Margin="532,556,0,0" Click="durationDown_Click" BorderThickness="0">
             <Button.Background>
                 <ImageBrush ImageSource="/arrowDown.png"/>
             </Button.Background>
         </Button>
 
-        <Button x:Name="playNoteButton" Content="&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Cursor="Hand" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold"  Margin="44,332,0,0" Click="playNoteButton_Click" FontSize="30"/>
-        <Button x:Name="addNoteButton" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Cursor="Hand" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Margin="44,418,0,0" Click="addNoteButton_Click" FontSize="30"/>
-        <Button x:Name="deleteNoteButton" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="80" Cursor="Hand" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Margin="44,504,0,0" Click="deleteNoteButton_Click" FontSize="30"/>
+        <Button x:Name="playNoteButton" Content="&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="90" Cursor="Hand" Background="#FFFFAD54" FontFamily="Century Gothic" FontWeight="Bold"  Margin="230,119,0,0" Click="playNoteButton_Click" FontSize="30" BorderThickness="0"/>
+        <Button x:Name="addNoteButton" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="90" Cursor="Hand" Background="#FFFFAD54" FontFamily="Century Gothic" FontWeight="Bold" Margin="334,119,0,0" Click="addNoteButton_Click" FontSize="30" BorderThickness="0"/>
+        <Button x:Name="deleteNoteButton" Content="X" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="90" Cursor="Hand" Background="#FFFFAD54" FontFamily="Century Gothic" FontWeight="Bold" Margin="437,119,0,0" Click="deleteNoteButton_Click" FontSize="30" BorderThickness="0"/>
 
-        <Button x:Name="previousNoteButton" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="29" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" Margin="167,169,0,0" Click="previousNoteButton_Click" FontSize="20"/>
-        <Button x:Name="nextNoteButton" Content="&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Height="29" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" Margin="524,169,0,0" Click="nextNoteButton_Click" FontSize="20"/>
-        <ListBox x:Name="trackNotesListBox" Background="#171C27" HorizontalAlignment="Left" Height="729" Margin="898,64,0,0" VerticalAlignment="Top" Width="295" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold" Foreground="Snow"/>
-        <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Background="#FFFFD173" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" Margin="69,3,0,0" Click="saveButton_Click"/>
-        <TextBox x:Name="trackNameTextBox" FontFamily="Century Gothic" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="29" Margin="134,21,0,0" Visibility="Hidden"/>
+        <Button x:Name="previousNoteButton" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="90" Background="#FFFFAD54" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" Margin="127,119,0,0" Click="previousNoteButton_Click" FontSize="50" BorderThickness="0"/>
+        <Button x:Name="nextNoteButton" Content="&gt;" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="90" Background="#FFFFAD54" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" Margin="540,119,0,0" Click="nextNoteButton_Click" FontSize="50" BorderThickness="0"/>
+        <ListBox x:Name="trackNotesListBox" Background="#171C27" HorizontalAlignment="Left" Height="729" Margin="898,64,0,0" VerticalAlignment="Top" Width="295" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold" Foreground="Snow" BorderThickness="0"/>
+        <Button x:Name="saveButton" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" Background="#FFFFAD54" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" Margin="69,3,0,0" Click="saveButton_Click" BorderThickness="0"/>
+        <TextBox x:Name="trackNameTextBox" FontFamily="Century Gothic" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="156" Height="29" Margin="134,21,0,0" Visibility="Hidden" BorderThickness="0"/>
     </Grid>
 </UserControl>

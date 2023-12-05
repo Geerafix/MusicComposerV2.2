@@ -8,13 +8,48 @@
              d:DesignHeight="800" d:DesignWidth="1200">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/bck.png"/>
+            <ImageBrush ImageSource="/back.png"/>
         </Grid.Background>
-        <Label x:Name="tracksLabel" Content="Tracks" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Chopin Script" FontSize="170" Foreground="#FFD173" Margin="99, 99,0,0"/>
-        <ListBox x:Name="tracksListBox" HorizontalAlignment="Left" Height="420" Margin="152,308,0,0" VerticalAlignment="Top" Width="361" Background="#171C27" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13" SelectionChanged="tracksListBox_SelectedIndexChanged"/>
-        <Button x:Name="deleteTrackButton" Content="X" Cursor="Hand" HorizontalAlignment="Left" Margin="209,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="10.8" Background="#FFAD5E" BorderThickness="0" Click="deleteButton_Click"/>
-        <Button x:Name="modifyTrackButton" Content="✎" Cursor="Hand" HorizontalAlignment="Left" Margin="153,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13.8" Background="#FFAD5E" BorderThickness="0" Click="modifyTrackButton_Click"/>
-        <Button x:Name="playTrackButton" Content=">" Cursor="Hand" HorizontalAlignment="Left" Margin="265,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13.8" Background="#FFAD5E" BorderThickness="0" Click="playTrackButton_Click"/>
-        <Button x:Name="menuButton" Content="Main menu" HorizontalAlignment="Left" Margin="800,450,0,0" VerticalAlignment="Top" Width="200" Height="100" FontFamily="Century Gothic" FontSize="30" Background="#FFAD5E" BorderThickness="0" Click="menuButton_Click"/>
+        <Label x:Name="tracksLabel" Content="Tracks" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Chopin Script" FontSize="170" Margin="99, 99,0,0">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE39137"/>
+                    <GradientStop Color="#FFFDC485" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <ListBox x:Name="tracksListBox" HorizontalAlignment="Left" Height="420" Margin="152,308,0,0" VerticalAlignment="Top" Width="361" Background="#171C27" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold" FontSize="18" SelectionChanged="tracksListBox_SelectedIndexChanged"/>
+        <Button x:Name="deleteTrackButton" Content="X" Cursor="Hand" HorizontalAlignment="Left" Margin="209,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="10.8" BorderThickness="0" Click="deleteButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFAD54"/>
+                    <GradientStop Color="#FFFFD173" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="modifyTrackButton" Content="✎" Cursor="Hand" HorizontalAlignment="Left" Margin="153,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13.8" BorderThickness="0" Click="modifyTrackButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFAD54"/>
+                    <GradientStop Color="#FFFFD173" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="playTrackButton" Content=">" Cursor="Hand" HorizontalAlignment="Left" Margin="265,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="13.8" BorderThickness="0" Click="playTrackButton_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFAD54"/>
+                    <GradientStop Color="#FFFFD173" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="menuButton" Content="Menu" HorizontalAlignment="Left" Margin="800,450,0,0" Cursor="Hand" VerticalAlignment="Top" Width="200" Height="100" FontSize="42" FontFamily="Forte" Foreground="#FF02182B" BorderThickness="0" Click="menuButton_Click" FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFAD54"/>
+                    <GradientStop Color="#FFFFD173" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </UserControl>
