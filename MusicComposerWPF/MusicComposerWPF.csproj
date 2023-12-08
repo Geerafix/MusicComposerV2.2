@@ -9,8 +9,6 @@
 
   <ItemGroup>
     <None Remove="black-background.gif" />
-    <None Remove="Icons\pencil.png" />
-    <None Remove="Icons\plus.png" />
     <None Remove="pencil.png" />
     <None Remove="plus.png" />
   </ItemGroup>
@@ -37,7 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Icons\" />
     <Folder Include="Tracks\" />
   </ItemGroup>
 

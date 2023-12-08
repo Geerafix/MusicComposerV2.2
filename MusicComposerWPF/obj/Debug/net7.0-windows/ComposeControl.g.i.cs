@@ -213,7 +213,7 @@ namespace MusicComposerWPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MusicComposerWPF;component/composecontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MusicComposerWPF;V1.0.0.0;component/composecontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ComposeControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

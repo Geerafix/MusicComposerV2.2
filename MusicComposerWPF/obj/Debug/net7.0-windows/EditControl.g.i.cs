@@ -229,7 +229,7 @@ namespace MusicComposerWPF {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MusicComposerWPF;component/editcontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MusicComposerWPF;V1.0.0.0;component/editcontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\EditControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
