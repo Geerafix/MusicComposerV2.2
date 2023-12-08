@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace MusicComposerWPF {
     /// <summary>
@@ -83,6 +85,7 @@ namespace MusicComposerWPF {
                         durationLabel.Content = currentDuration.ToString();
                         trackNotesListBox.Items.Clear();
                         saveButton.Content = "Save";
+                        addNoteButton.Content = "+";
                         trackNameTextBox.Visibility = Visibility.Collapsed;
                         Thread saveThread = new Thread(() => {
                             Dispatcher.Invoke(() => { infoTextBox.Content = "Saved"; });
@@ -201,6 +204,9 @@ namespace MusicComposerWPF {
             if (pos < track.Count) {
                 addNoteButton.Content = "✎";
             }
+
+            clearHighlight();
+            highlightItem(pos);
         }
 
         public void nextNoteButton_Click(object sender, EventArgs e) {
@@ -220,6 +226,9 @@ namespace MusicComposerWPF {
             }
 
             position.Content = (pos + 1).ToString();
+
+            clearHighlight();
+            highlightItem(pos);
         }
 
         public string noteConv(int noteNumber) {
@@ -245,6 +254,26 @@ namespace MusicComposerWPF {
 
             pos = 0;
             position.Content = (pos + 1).ToString();
+
+            Dispatcher.BeginInvoke(new Action(() => { highlightItem(0); }), DispatcherPriority.ApplicationIdle);
+        }
+
+        private void highlightItem(int index) {
+            if (index >= 0 && index <= trackNotesListBox.Items.Count) {
+                ListBoxItem listBoxItem = (ListBoxItem)trackNotesListBox.ItemContainerGenerator.ContainerFromIndex(index);
+                if (listBoxItem != null) {
+                    listBoxItem.Background = new SolidColorBrush(Colors.Gray);
+                }
+            }
+        }
+
+        private void clearHighlight() {
+            for (int i = 0 ; i < trackNotesListBox.Items.Count ; i++) {
+                ListBoxItem listBoxItem = (ListBoxItem)trackNotesListBox.ItemContainerGenerator.ContainerFromIndex(i);
+                if (listBoxItem != null) {
+                    listBoxItem.ClearValue(BackgroundProperty);
+                }
+            }
         }
     }
 }
