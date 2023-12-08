@@ -189,6 +189,9 @@ namespace MusicComposerWPF {
             if (pos == track.Count) {
                 addNoteButton.Content = "+";
             }
+
+            clearHighlight();
+            highlightItem(pos);
         }
 
         public void previousNoteButton_Click(object sender, EventArgs e) {
