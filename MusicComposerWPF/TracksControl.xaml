@@ -41,7 +41,7 @@
                 </LinearGradientBrush>
             </Label.Foreground>
         </Label>
-        <ListBox x:Name="tracksListBox" HorizontalAlignment="Left" Height="420" Margin="152,308,0,0" VerticalAlignment="Top" Width="361" Background="#171C27" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold" FontSize="18" SelectionChanged="tracksListBox_SelectedIndexChanged"/>
+        <ListBox x:Name="tracksListBox" HorizontalAlignment="Left" Height="420" Margin="152,308,0,0" VerticalAlignment="Top" Width="361" Background="#171C27" Foreground="White" FontFamily="Century Gothic" FontWeight="Bold" FontSize="28" SelectionChanged="tracksListBox_SelectedIndexChanged" BorderThickness="5"/>
         <Button x:Name="deleteTrackButton" Content="" Style="{StaticResource Style}" Cursor="Hand" HorizontalAlignment="Left" Margin="209,740,0,0" VerticalAlignment="Top" Width="50" Height="50" Visibility="Hidden" FontFamily="Century Gothic" FontWeight="Bold" FontSize="10.8" BorderThickness="0" Click="deleteButton_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/close.png"/>
@@ -57,7 +57,7 @@
                 <ImageBrush ImageSource="/play.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="menuButton" Content="Menu" Style="{StaticResource Style}" HorizontalAlignment="Left" Margin="800,450,0,0" Cursor="Hand" VerticalAlignment="Top" Width="200" Height="100" Visibility="Visible" FontSize="42" FontFamily="Forte" Foreground="#FF02182B" BorderThickness="0" Click="menuButton_Click" FontWeight="Bold">
+        <Button x:Name="menuButton" Content="Menu" Style="{StaticResource Style}" HorizontalAlignment="Left" Margin="800,450,0,0" Cursor="Hand" VerticalAlignment="Top" Width="200" Height="100" Visibility="Visible" FontSize="42" FontFamily="Forte" Foreground="#FF02182B" BorderThickness="0" Click="menuButton_Click" FontWeight="Bold" Opacity="0.8">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFFFAD54"/>
@@ -67,3 +67,4 @@
         </Button>
     </Grid>
 </UserControl>
+    

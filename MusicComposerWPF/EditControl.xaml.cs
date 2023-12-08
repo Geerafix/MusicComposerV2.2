@@ -158,13 +158,27 @@ namespace MusicComposerWPF {
         }
 
         private void saveButton_Click(object sender, EventArgs e) {
-            StreamWriter writer = new StreamWriter("../../../Tracks/" + tName + ".txt");
-            foreach (Note note in track) {
-                writer.WriteLine(note.getNumber());
-                writer.WriteLine(note.getDuration());
+            if (track.Count > 2) {
+                StreamWriter writer = new StreamWriter("../../../Tracks/" + tName + ".txt");
+                foreach (Note note in track) {
+                    writer.WriteLine(note.getNumber());
+                    writer.WriteLine(note.getDuration());
+                }
+                writer.Close();
+                Thread saveThread = new Thread(() => {
+                    Dispatcher.Invoke(() => { infoTextBox.Content = "Saved"; });
+                    Thread.Sleep(1000);
+                    Dispatcher.Invoke(() => { infoTextBox.Content = ""; });
+                });
+                saveThread.Start();
+            } else {
+                Thread saveThread = new Thread(() => {
+                    Dispatcher.Invoke(() => { infoTextBox.Content = "Add some notes (min. 3)"; });
+                    Thread.Sleep(1000);
+                    Dispatcher.Invoke(() => { infoTextBox.Content = ""; });
+                });
+                saveThread.Start();
             }
-            writer.Close();
-            track.Clear();
         }
 
         private void toTracksButton_Click(object sender, EventArgs e) {

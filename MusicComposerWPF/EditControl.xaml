@@ -38,9 +38,9 @@
         <Label x:Name="position" Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="30" FontWeight="Bold" Foreground="Snow" Background="Transparent" Margin="978,12,0,0"/>
         <Label x:Name="noteCount" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="30" FontWeight="Bold" Foreground="Snow" Margin="1152,12,0,0"/>
 
-        <Button x:Name="toTracksButton" Content="" Style="{StaticResource Style}" HorizontalAlignment="Left" Cursor="Hand" VerticalAlignment="Top" Width="60" Height="60" FontFamily="Century Gothic" FontWeight="Bold" Margin="3,3,0,0" Click="toTracksButton_Click" BorderThickness="0">
+        <Button x:Name="toTracksButton" Content="Tracks" Style="{StaticResource Style}" HorizontalAlignment="Left" Cursor="Hand" VerticalAlignment="Top" Width="60" Height="60" FontFamily="Century Gothic" FontWeight="Bold" Margin="3,3,0,0" Click="toTracksButton_Click" BorderThickness="0" FontSize="18">
             <Button.Background>
-                <ImageBrush ImageSource="/tracks.png"/>
+                <ImageBrush ImageSource="/save.png"/>
             </Button.Background>
         </Button>
 
@@ -73,9 +73,9 @@
                 <ImageBrush ImageSource="/play.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="addNoteButton" Style="{StaticResource Style}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="90" Cursor="Hand" FontFamily="Century Gothic" FontWeight="Bold" Margin="338,122,0,0" Click="addNoteButton_Click" FontSize="40" BorderThickness="0">
+        <Button x:Name="addNoteButton" Style="{StaticResource Style}" Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="90" Cursor="Hand" FontFamily="Century Gothic" FontWeight="Bold" Margin="338,122,0,0" Click="addNoteButton_Click" FontSize="60" BorderThickness="0">
             <Button.Background>
-                <ImageBrush ImageSource="/plus.png"/>
+                <ImageBrush ImageSource="/save.png"/>
             </Button.Background>
         </Button>
         <Button x:Name="deleteNoteButton" Style="{StaticResource Style}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="90" Cursor="Hand" FontFamily="Century Gothic" FontWeight="Bold" Margin="440,122,0,0" Click="deleteNoteButton_Click" FontSize="30" BorderThickness="0">
@@ -94,8 +94,8 @@
                 <ImageBrush ImageSource="/right-arrow.png"/>
             </Button.Background>
         </Button>
-        <ListBox x:Name="trackNotesListBox" Background="#171C27" HorizontalAlignment="Left" Height="729" Margin="898,64,0,0" VerticalAlignment="Top" Width="295" FontFamily="Century Gothic" FontSize="14" FontWeight="Bold" Foreground="Snow"/>
-        <Button x:Name="saveButton" Content="" Style="{StaticResource Style}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" Margin="69,3,0,0" Click="saveButton_Click" BorderThickness="0">
+        <ListBox x:Name="trackNotesListBox" Background="#171C27" HorizontalAlignment="Left" Height="729" Margin="898,64,0,0" VerticalAlignment="Top" Width="295" FontFamily="Century Gothic" FontSize="28" FontWeight="Bold" Foreground="Snow" BorderThickness="5"/>
+        <Button x:Name="saveButton" Content="Save" Style="{StaticResource Style}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Height="60" FontFamily="Century Gothic" FontWeight="Bold" Cursor="Hand" Margin="69,3,0,0" Click="saveButton_Click" BorderThickness="0" FontSize="18">
             <Button.Background>
                 <ImageBrush ImageSource="/save.png"/>
             </Button.Background>
@@ -103,5 +103,6 @@
         <TextBox x:Name="trackNameTextBox" FontFamily="Century Gothic" FontSize="13.8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="157" Height="36" Margin="135,16,0,0" Visibility="Hidden" BorderThickness="0"/>
         <Label x:Name="trackNameLabel" Content="Editing:" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="Snow" Margin="136,17,0,0" BorderThickness="0"/>
         <Label x:Name="trackName" Content="(track name)" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="18" Foreground="#FFFFAD54" Margin="206,17,0,0" BorderThickness="0"/>
+        <Label x:Name="infoTextBox" Content="" HorizontalAlignment="Left" Margin="443,19,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Cascadia Mono Light" Foreground="#FFBB3737" Background="Transparent"/>
     </Grid>
 </UserControl>

@@ -8,20 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove=".png" />
-    <None Remove="back.png" />
     <None Remove="black-background.gif" />
-    <None Remove="close.png" />
-    <None Remove="down.png" />
-    <None Remove="left-arrow.png" />
-    <None Remove="main-menu.png" />
+    <None Remove="Icons\pencil.png" />
+    <None Remove="Icons\plus.png" />
     <None Remove="pencil.png" />
-    <None Remove="play.png" />
     <None Remove="plus.png" />
-    <None Remove="right-arrow.png" />
-    <None Remove="save.png" />
-    <None Remove="tracks.png" />
-    <None Remove="up.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -46,6 +37,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Icons\" />
     <Folder Include="Tracks\" />
   </ItemGroup>
 

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MusicComposerWPF"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="MainWindow" Height="837" Width="1214">
     <Grid>
         <local:EditControl x:Name="EditControl"/>

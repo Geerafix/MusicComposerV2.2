@@ -53,35 +53,63 @@ namespace MusicComposerWPF {
             }
             writer.Close();
             track.Clear();
+            saveButton.Content = "Save";
+            trackNameTextBox.Visibility = Visibility.Collapsed;
             trackNotesListBox.Items.Clear();
         }
 
         private void saveButton_Click(object sender, EventArgs e) {
-            if (!trackNameTextBox.IsVisible) {
-                saveButton.Content = "✓";
-                trackNameTextBox.Visibility = Visibility.Visible;
-            } else if (trackNameTextBox.IsVisible) {
-                if (trackNameTextBox.Text != "") {
-                    string trackName = trackNameTextBox.Text;
-                    trackNameTextBox.Text = null;
-                    StreamWriter writer = new StreamWriter("../../../Tracks/" + trackName + ".txt");
-                    foreach (Note note in track) {
-                        writer.WriteLine(note.getNumber());
-                        writer.WriteLine(note.getDuration());
+            if (track.Count > 2) {
+                if (!trackNameTextBox.IsVisible) {
+                    saveButton.Content = "✓";
+                    trackNameTextBox.Visibility = Visibility.Visible;
+                } else if (trackNameTextBox.IsVisible) {
+                    if (trackNameTextBox.Text != "") {
+                        string trackName = trackNameTextBox.Text;
+                        trackNameTextBox.Text = null;
+                        StreamWriter writer = new StreamWriter("../../../Tracks/" + trackName + ".txt");
+                        foreach (Note note in track) {
+                            writer.WriteLine(note.getNumber());
+                            writer.WriteLine(note.getDuration());
+                        }
+                        writer.Close();
+                        track.Clear();
+                        pos = 0;
+                        currentNote = 0;
+                        currentDuration = 500;
+                        noteLabel.Content = noteConv(notes[currentNote]);
+                        position.Content = (pos + 1).ToString();
+                        noteCount.Content = pos.ToString();
+                        durationLabel.Content = currentDuration.ToString();
+                        trackNotesListBox.Items.Clear();
+                        saveButton.Content = "Save";
+                        trackNameTextBox.Visibility = Visibility.Collapsed;
+                        Thread saveThread = new Thread(() => {
+                            Dispatcher.Invoke(() => { infoTextBox.Content = "Saved"; });
+                            Thread.Sleep(1000);
+                            Dispatcher.Invoke(() => { infoTextBox.Content = ""; });
+                        });
+                        saveThread.Start();
+                    } else {
+                        Thread saveThread = new Thread(() => {
+                            Dispatcher.Invoke(() => { 
+                                infoTextBox.Content = "Enter track name";
+                                saveButton.Content = "Save";
+                                trackNameTextBox.Visibility = Visibility.Collapsed;
+                            });
+                            Thread.Sleep(1000);
+                            Dispatcher.Invoke(() => {  infoTextBox.Content = ""; });
+                        });
+                        saveThread.Start();
                     }
-                    writer.Close();
-                    track.Clear();
-                    pos = 0;
-                    currentNote = 0;
-                    currentDuration = 500;
-                    noteLabel.Content = noteConv(notes[currentNote]);
-                    position.Content = (pos + 1).ToString();
-                    noteCount.Content = pos.ToString();
-                    durationLabel.Content = currentDuration.ToString();
-                    trackNotesListBox.Items.Clear();
                 }
-                saveButton.Content = "Save";
-                trackNameTextBox.Visibility = Visibility.Collapsed;
+            } else {
+                Thread saveThread = new Thread(() => {
+                    Dispatcher.Invoke(() => { infoTextBox.Content = "Add some notes (min. 3)"; });
+                    Thread.Sleep(1000);
+                    Dispatcher.Invoke(() => { infoTextBox.Content = ""; });
+                });
+                saveThread.Start();
             }
         }
 
