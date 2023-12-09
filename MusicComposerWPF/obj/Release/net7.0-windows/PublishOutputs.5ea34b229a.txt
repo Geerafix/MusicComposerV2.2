@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\MusicComposerWPF.exe
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\MusicComposerWPF.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\MusicComposerWPF.deps.json
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\MusicComposerWPF.runtimeconfig.json
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\MusicComposerWPF.pdb
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\NAudio.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\NAudio.Asio.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\NAudio.Core.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\NAudio.Midi.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\NAudio.Wasapi.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\NAudio.WinForms.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\NAudio.WinMM.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\bin\Release\net7.0-windows\app.publish\WpfAnimatedGif.dll
