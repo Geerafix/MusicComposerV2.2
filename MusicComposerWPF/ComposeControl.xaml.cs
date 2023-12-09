@@ -27,10 +27,10 @@ namespace MusicComposerWPF {
         private string path = "../../../Resources/tempTrack.txt";
         private List<Note> track = new List<Note>();
         private Thread thread;
-        private int pos = 0, currentNote = 0, currentDuration = 500;
+        private int pos = 0, currentNote = 1, currentDuration = 500;
 
         private int[] notes = {
-            24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
+            0, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
             34, 35, 36, 37, 38, 39, 40, 41, 42, 43,
             44, 45, 46, 47, 48, 49, 50, 51, 52, 53,
             54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
@@ -53,6 +53,7 @@ namespace MusicComposerWPF {
                 writer.WriteLine(note.getNumber());
                 writer.WriteLine(note.getDuration());
             }
+            pos = 0;
             writer.Close();
             track.Clear();
             saveButton.Content = "Save";
@@ -77,7 +78,7 @@ namespace MusicComposerWPF {
                         writer.Close();
                         track.Clear();
                         pos = 0;
-                        currentNote = 0;
+                        currentNote = 1;
                         currentDuration = 500;
                         noteLabel.Content = noteConv(notes[currentNote]);
                         position.Content = (pos + 1).ToString();
@@ -176,8 +177,13 @@ namespace MusicComposerWPF {
             if (pos < track.Count) {
                 track.Remove(track[pos]);
                 if (track.Count != 0 && pos != track.Count) {
-                    currentNote = track[pos].getNumber() - 24;
-                    currentDuration = track[pos].getDuration();
+                    if (track[pos].getNumber() == 0) {
+                        currentNote = track[pos].getNumber();
+                        currentDuration = track[pos].getDuration();
+                    } else {
+                        currentNote = track[pos].getNumber() - 23;
+                        currentDuration = track[pos].getDuration();
+                    }
                 }
 
                 noteLabel.Content = noteConv(notes[currentNote]);
@@ -197,8 +203,13 @@ namespace MusicComposerWPF {
         public void previousNoteButton_Click(object sender, EventArgs e) {
             if (pos > 0) {
                 pos -= 1;
-                currentNote = track[pos].getNumber() - 24;
-                currentDuration = track[pos].getDuration();
+                if (track[pos].getNumber() == 0) {
+                    currentNote = 0;
+                    currentDuration = track[pos].getDuration();
+                } else {
+                    currentNote = track[pos].getNumber() - 23;
+                    currentDuration = track[pos].getDuration();
+                }
                 position.Content = (pos + 1).ToString();
                 noteLabel.Content = noteConv(notes[currentNote]).ToString();
                 durationLabel.Content = currentDuration.ToString();
@@ -217,9 +228,15 @@ namespace MusicComposerWPF {
                 pos += 1;
             }
 
+
             if (pos < track.Count) {
-                currentNote = track[pos].getNumber() - 24;
-                currentDuration = track[pos].getDuration();
+                if (track[pos].getNumber() == 0) {
+                    currentNote = 0;
+                    currentDuration = track[pos].getDuration();
+                } else {
+                    currentNote = track[pos].getNumber() - 23;
+                    currentDuration = track[pos].getDuration();
+                }
                 noteLabel.Content = noteConv(notes[currentNote]).ToString();
                 durationLabel.Content = currentDuration.ToString();
             }
@@ -236,7 +253,11 @@ namespace MusicComposerWPF {
 
         public string noteConv(int noteNumber) {
             string[] noteNames = { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B" };
-            return noteNames[noteNumber % 12] + ((noteNumber / 12) - 1);
+            int octave = noteNumber / 12, noteInOctave = noteNumber % 12;
+            if (octave - 1 < 0) {
+                return "-";
+            }
+            return noteNames[noteInOctave] + (octave - 1);
         }
 
         public void loadTempTrack() {
@@ -250,6 +271,13 @@ namespace MusicComposerWPF {
                 addNoteButton.Content = "✎";
                 currentNote = track[0].getNumber() - 24;
                 currentDuration = track[0].getDuration();
+                if (track[pos].getNumber() == 0) {
+                    currentNote = 0;
+                    currentDuration = track[pos].getDuration();
+                } else {
+                    currentNote = track[pos].getNumber() - 23;
+                    currentDuration = track[pos].getDuration();
+                }
                 noteLabel.Content = noteConv(notes[currentNote]);
                 durationLabel.Content = currentDuration.ToString();
                 noteCount.Content = track.Count.ToString();

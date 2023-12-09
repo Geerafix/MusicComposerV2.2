@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -73,9 +74,15 @@ namespace MusicComposerWPF {
             MidiOut play = win.getMidi();
             thread = new Thread(() => {
                 for (int i = 0 ; i < lines.Length ; i += 2) {
-                    play.Send(MidiMessage.StartNote(Int32.Parse(lines[i]), 127, 1).RawData);
-                    Thread.Sleep(Int32.Parse(lines[i + 1]));
-                    play.Send(MidiMessage.StopNote(Int32.Parse(lines[i]), 127, 1).RawData);
+                    int note = Int32.Parse(lines[i]);
+                    int dur = Int32.Parse(lines[i + 1]);
+                    if (note == 0) {
+                        Thread.Sleep(dur);
+                    } else {
+                        play.Send(MidiMessage.StartNote(note, 127, 1).RawData);
+                        Thread.Sleep(dur);
+                        play.Send(MidiMessage.StopNote(note, 127, 1).RawData);
+                    }
                 }
             });
             thread.Start();
