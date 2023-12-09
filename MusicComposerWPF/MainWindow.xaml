@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MusicComposerWPF"
         mc:Ignorable="d"
         ResizeMode="NoResize"
-        Title="MainWindow" Height="837" Width="1214">
+        Title="MusicComposer" Height="837" Width="1214">
     <Grid>
         <local:EditControl x:Name="EditControl"/>
         <local:MenuControl x:Name="MenuControl"/>

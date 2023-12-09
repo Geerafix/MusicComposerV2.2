@@ -76,3 +76,4 @@ C:\Users\Adameq\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windo
 C:\Users\Adameq\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\MusicComposerWPF.csproj.CopyComplete
 C:\Users\Adameq\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\MusicComposerWPF.genruntimeconfig.cache
 C:\Users\Adameq\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\ref\MusicComposerWPF.dll
+C:\Users\User\Desktop\MusicComposerWPF\MusicComposerWPF\obj\Debug\net7.0-windows\MusicComposerWPF_Content.g.cs
